@@ -71,7 +71,15 @@ describe('Park', function() {
   });
 
 
-  it('should be able to calculate the total number of visitors per year');
+  it('should be able to calculate the total number of visitors per year', function(){
+    park.addDinos(dino1);
+    park.addDinos(dino2);
+    park.addDinos(dino3);
+    park.addDinos(dino4);
+    const actual = park.totalYearlyVisitors();
+    assert.strictEqual(actual, 76650 );
+  });
+
 
   it('should be able to calculate total revenue for one year');
 
