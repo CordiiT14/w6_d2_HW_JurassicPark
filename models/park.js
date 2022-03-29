@@ -20,4 +20,14 @@ Park.prototype.favouriteDino = function(){
     return this.dinosaurs[0];
 }
 
+Park.prototype.searchDinoBySpecies = function(species){
+    const dinosOfSpecies = [];
+    for(let dino of this.dinosaurs){
+        if (dino.species === species){
+            dinosOfSpecies.push(dino);
+        };
+    };
+    return dinosOfSpecies;
+};
+
 module.exports = Park;
