@@ -81,6 +81,13 @@ describe('Park', function() {
   });
 
 
-  it('should be able to calculate total revenue for one year');
+  it('should be able to calculate total revenue for one year', function(){
+    park.addDinos(dino1);
+    park.addDinos(dino2);
+    park.addDinos(dino3);
+    park.addDinos(dino4);
+    const actual = park.yearlyRevenue();
+    assert.strictEqual(actual, 1149750)
+  });
 
 });
