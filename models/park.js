@@ -13,4 +13,11 @@ Park.prototype.removeDinos = function(dino){
     this.dinosaurs.splice(index, 1);
 }
 
+Park.prototype.favouriteDino = function(){
+    this.dinosaurs.sort(function(a, b){
+        return b.guestsAttractedPerDay-a.guestsAttractedPerDay;
+    })
+    return this.dinosaurs[0];
+}
+
 module.exports = Park;
