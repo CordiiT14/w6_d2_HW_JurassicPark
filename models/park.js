@@ -30,4 +30,12 @@ Park.prototype.searchDinoBySpecies = function(species){
     return dinosOfSpecies;
 };
 
+Park.prototype.totalDailyVisitors = function(){
+    let total = 0;
+    for(let dino of this.dinosaurs){
+        total += dino.guestsAttractedPerDay;
+    }
+    return total;
+}
+
 module.exports = Park;
